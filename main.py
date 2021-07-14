@@ -56,6 +56,10 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    _url = "https://btrace.video.qq.com/kvcollect?BossId=3647&Pwd=1005892234&osVer=mac%2010.15.5"
-    response = requests.get(_url).content
-    print(response)
+    # _url = "https://btrace.video.qq.com/kvcollect?BossId=3647&Pwd=1005892234&osVer=mac%2010.15.5"
+    # response = requests.get(_url).content
+    # print(response)
+    import logging
+    logging.basicConfig(filename="config.log",format="[%(asctime)s]-[%(name)s]-[%(levelname)s] %(message)s",level=logging.INFO)
+    logger = logging.getLogger()
+    logger.warning("test")
